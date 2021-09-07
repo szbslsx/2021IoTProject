@@ -1,0 +1,2 @@
+RABBIT_HOST= '52.247.213.28'
+QUEUE_TOPIC = 'topic_name'

@@ -16,3 +16,11 @@ IoT Hub? Gateway?
 - /PyBlueZ-master/examples/simple/rfccom-server is not working: “Could not retrieve an available service channel”
 - /PyBlueZ-master/examples/simple/l2pserver is not working: “protocal not supported”
 - /Test is not working: “Could not retrieve an available service channel”
+
+Proposal/final goal:
+- Gather data from a wearable health sensor like Fitbit and present tracked data in a dashboard at local device. Then pass the data to cloud server to train a machine learning model to predict activity’s contribution to sleep quality. 
+- Data was collected from sensor by local device through Bluetooth. The sensor was simulated on a local machine and data was pre-installed to simulate output. PyBlueZ was used in Python to set up the Master - Sub connection between local device and sensor. 
+- Data was transferred from local device to cloud server through MQTT protocol, which used RabbitMQ in Python to set up the sensor as publisher, local device as broker, and cloud server as subscriber. The server was hosted on Azure Cloud Virtual Machine running Ubuntu. 
+- The data was normalized into dataframe through Pandas. Sklearn and Statsmodel were used for multiple regression and performance evaluation, which was based on confusion matrix and n-fold cross-validation. 
+- Packaged code into Docker images for deployment.
+

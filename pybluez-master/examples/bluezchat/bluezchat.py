@@ -8,8 +8,10 @@ Opens a l2cap socket and listens on PSM 0x1001.
 Provides the ability to scan for nearby bluetooth devices and establish chat
 sessions with them.
 """
-
-import gtk
+import gi
+gi.require_version("Gtk", "3.0")
+from gi.repository import Gtk
+#import gtk
 import gobject
 import gtk.glade
 

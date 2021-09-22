@@ -1,5 +1,5 @@
 Note:
-1. All packages must be installed in the same python folder. (exp, pip3-pyhton3)
+1. All dependencies packages must be installed in the same python version folder. (exp, pip3 matches pyhton3. Use the same version across the board. No pip2 then pyhton3.) Check and make sure defacult pip and python shell command are pointed toward the same version by using 'which python' and 'which pip' command. If they don't a match, it has to be fixed beforehand. 
 
 Current Progress: 
 - Could not access bluetooth interface/shell on cloud VM. 
